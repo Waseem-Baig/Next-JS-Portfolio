@@ -15,7 +15,7 @@ const Projects = () => {
         />
         <ProjectCard
           src="/My_PortFolio.png"
-          title="My POrtFolio"
+          title="My PortFolio"
           description="I recently built and launched my personal portfolio website to showcase my professional skills, projects, and achievements. The website is designed to provide a comprehensive view of my work and expertise in web development.
           Key features of the site include:Responsive Design, Project Gallery, Blog Section, Contact Form.Technologies used to develop the website include HTML, CSS, JavaScript, and Bootstrap."
         />
