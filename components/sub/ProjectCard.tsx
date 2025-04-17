@@ -5,23 +5,29 @@ interface Props {
   src: string;
   title: string;
   description: string;
+  link?: string; // Make link optional to avoid errors for projects without links
 }
 
-const ProjectCard = ({ src, title, description }: Props) => {
+const ProjectCard = ({ src, link, title, description }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] block cursor-pointer hover:shadow-xl transition-shadow max-w-[300px]"
+    >
       <Image
         src={src}
         alt={title}
         width={1000}
         height={1000}
-        className="w-full object-contain"
+        className="w-auto object-contain"
       />
       <div className="relative p-4">
-        <h1 className="text-2xl font-semibold text-white ">{title}</h1>
-        <p className="mt-2 text-gray-300">{description}</p>
+        <h1 className="text-2xl font-semibold text-white">{title}</h1>
+        {/* <p className="mt-2 text-gray-300">{description}</p> */}
       </div>
-    </div>
+    </a>
   );
 };
 
