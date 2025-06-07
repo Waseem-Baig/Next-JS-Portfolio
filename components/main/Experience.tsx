@@ -87,7 +87,8 @@ const experiences = [
 
 const Experience = () => {
   // Change the model path as needed
-  const modelPath = "/models/sci_fi_surveillance_drone.glb";
+  const modelPath =
+    "/models/hyperx_alloy_origins_60_rgb_mechanical_keyboard.glb";
 
   return (
     <section
