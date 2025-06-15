@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://waseembaig.me
+
+# Sitemaps
+Sitemap: https://waseembaig.me/sitemap.xml

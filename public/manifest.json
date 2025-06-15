@@ -1,0 +1,26 @@
+{
+  "name": "Waseem Baig Portfolio",
+  "short_name": "WaseemPortfolio",
+  "description": "Waseem Baig's personal portfolio showcasing skills, projects, and experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030014",
+  "theme_color": "#7042f8",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 72x72 96x96 128x128 256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/myPic.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/myPic.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ]
+}
