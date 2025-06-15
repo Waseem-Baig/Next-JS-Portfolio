@@ -100,13 +100,13 @@ const Experience = () => {
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, type: "spring" }}
-        className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 text-center drop-shadow-lg"
+        className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 text-center drop-shadow-lg mb-6"
       >
         Experience
       </motion.h2>
 
       {/* 3D Model and Timeline */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full mt-2">
         {/* 3D Model Canvas */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
