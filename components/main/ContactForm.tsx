@@ -1,5 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+
+const SERVICE_ID = "service_jshbwjt";
+const TEMPLATE_ID = "template_zcy4mk3";
+const USER_ID = "Y7e9YXeZjtpUpIyUu";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -11,21 +16,13 @@ const ContactForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Send form data to Formspree via AJAX
-    const res = await fetch("https://formspree.io/f/movwyvjq", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-      },
-      body: new FormData(e.target as HTMLFormElement),
-    });
-    if (res.ok) {
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, form, USER_ID).then(() => {
       setSubmitted(true);
       setForm({ name: "", email: "", message: "" });
-      setTimeout(() => setSubmitted(false), 4000); // Hide message after 4s
-    }
+      setTimeout(() => setSubmitted(false), 4000);
+    });
   };
 
   return (
