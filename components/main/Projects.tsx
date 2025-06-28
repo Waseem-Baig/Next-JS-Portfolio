@@ -42,26 +42,26 @@ const Projects = () => {
         <ProjectCard
           src="/avy.png"
           link="https://avy.vercel.app/"
-          title="Career Co"
+          title="Avy"
           description="Check out CareerCo, an educational website offering comprehensive career guidance and resources..."
         />
         <ProjectCard
           src="/deliveryDost.png"
           link="https://delivery-dost.vercel.app/"
-          title="My Portfolio"
-          description="I recently built and launched my personal portfolio website to showcase my professional skills..."
+          title="Delivery Dost"
+          description="Delivery Dost is a user-friendly platform designed to streamline the food delivery process..."
         />
         <ProjectCard
           src="/kanva.png"
           link="https://kanva-delta.vercel.app/login"
-          title="VIT Grade Calculator"
-          description="The VITAP Grade Calculator is a comprehensive and intuitive tool..."
+          title="Kanva"
+          description="Kanva is a versatile platform designed to enhance productivity and collaboration..."
         />
         <ProjectCard
           src="/todo.png"
           link="https://todo-list-waseem-baigs-projects.vercel.app/"
-          title="QR Code Generator"
-          description="The QR Code Generator was developed to provide a quick and easy solution for generating QR codes..."
+          title="Todo List"
+          description="The Todo List application helps users manage their tasks efficiently with a simple and intuitive interface."
         />
       </div>
     </div>
