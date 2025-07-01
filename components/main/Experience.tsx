@@ -2,46 +2,65 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Stage, useGLTF, Html } from "@react-three/drei";
+import { OrbitControls, Stage, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
 
-// 3D Model Loader (replace modelPath prop as needed)
+// 3D Model Loader
 function ExperienceModel({ modelPath }: { modelPath: string }) {
   const { scene } = useGLTF(modelPath);
   return <primitive object={scene} scale={1.5} />;
 }
 
-// 3D Canvas with smooth, engaging cursor movement and spring animation
+// 3D Canvas with ONLY mouse hover interaction (no auto-rotation)
 function Experience3D({ modelPath }: { modelPath: string }) {
   const group = useRef<any>(null);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-  const idleY = useRef(0);
 
-  // Track mouse movement on the window
+  // Track mouse movement on the canvas area only
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      // Normalize mouse position to [-1, 1]
-      const x = (event.clientX / window.innerWidth) * 2 - 1;
-      const y = -(event.clientY / window.innerHeight) * 2 + 1;
-      setMouse({ x, y });
+      // Get canvas element
+      const canvas = document.querySelector("canvas");
+      if (canvas) {
+        const rect = canvas.getBoundingClientRect();
+        // Normalize mouse position relative to canvas [-1, 1]
+        const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        setMouse({ x, y });
+      }
     };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+
+    // Only listen when hovering over the canvas
+    const canvas = document.querySelector("canvas");
+    if (canvas) {
+      canvas.addEventListener("mousemove", handleMouseMove);
+      canvas.addEventListener("mouseleave", () => {
+        // Reset to center position when mouse leaves
+        setMouse({ x: 0, y: 0 });
+      });
+
+      return () => {
+        canvas.removeEventListener("mousemove", handleMouseMove);
+        canvas.removeEventListener("mouseleave", () =>
+          setMouse({ x: 0, y: 0 })
+        );
+      };
+    }
   }, []);
 
-  // Always rotate, but add cursor interaction
+  // ONLY mouse interaction, NO auto-rotation
   useFrame(() => {
     if (group.current) {
-      // Idle rotation
-      idleY.current += 0.008;
-      // Cursor interaction (offset)
-      const targetY = idleY.current + mouse.x * Math.PI * 0.2;
-      const targetX = mouse.y * Math.PI * 0.1;
-      // Smoothly interpolate
-      group.current.rotation.y += (targetY - group.current.rotation.y) * 0.08;
-      group.current.rotation.x += (targetX - group.current.rotation.x) * 0.08;
+      // Target rotation based on mouse position
+      const targetX = mouse.y * 1.5; // Vertical mouse controls X rotation
+      const targetY = mouse.x * 1.5; // Horizontal mouse controls Y rotation
+
+      // Smooth interpolation to target
+      group.current.rotation.x += (targetX - group.current.rotation.x) * 0.1;
+      group.current.rotation.y += (targetY - group.current.rotation.y) * 0.1;
+
       // Subtle floating effect
-      group.current.position.y = Math.sin(Date.now() * 0.001) * 0.1;
+      group.current.position.y = Math.sin(Date.now() * 0.001) * 0.05;
     }
   });
 
@@ -86,7 +105,6 @@ const experiences = [
 ];
 
 const Experience = () => {
-  // Change the model path as needed
   const modelPath =
     "/models/hyperx_alloy_origins_60_rgb_mechanical_keyboard.glb";
 
@@ -114,12 +132,14 @@ const Experience = () => {
           transition={{ duration: 0.8, type: "spring" }}
           className="md:w-[550px] w-full h-[400px] rounded-2xl flex items-center justify-center relative"
         >
-          <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+          <Canvas
+            camera={{ position: [0, 0, 4], fov: 50 }}
+            style={{ cursor: "pointer" }}
+          >
             <ambientLight intensity={0.7} />
             <directionalLight position={[5, 5, 5]} intensity={0.7} />
             <Stage environment="city" intensity={0.5} shadows={false}>
               <Experience3D modelPath={modelPath} />
-              {/* Place Html here, inside the Canvas */}
             </Stage>
             <OrbitControls
               enableZoom={false}

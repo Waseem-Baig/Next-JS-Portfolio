@@ -17,19 +17,19 @@ const Projects = () => {
       <div className="h-full w-full flex gap-10 px-10 flex-wrap justify-around items-center z-20">
         <ProjectCard
           src="/Career_Co.png"
-          link="https://waseem-baig.github.io/CareerCo/"
+          link=" http://waseem-baig.github.io/CareerCo/"
           title="Career Co"
           description="Check out CareerCo, an educational website offering comprehensive career guidance and resources..."
         />
         <ProjectCard
           src="/My_PortFolio.png"
-          link="https://waseem-baig.github.io/My-portfolio/"
+          link="http://waseem-baig.github.io/My-portfolio/"
           title="My Portfolio"
           description="I recently built and launched my personal portfolio website to showcase my professional skills..."
         />
         <ProjectCard
           src="/VIT_Grade_Calculator.png"
-          link="https://waseem-baig.github.io/Grade_Calculator/"
+          link="http://waseem-baig.github.io/Grade_Calculator/"
           title="VIT Grade Calculator"
           description="The VITAP Grade Calculator is a comprehensive and intuitive tool..."
         />
