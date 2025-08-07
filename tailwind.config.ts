@@ -16,7 +16,7 @@ const config: Config = {
     },
     screens: {
       xs: "370px", // custom xs breakpoint at 400px
-      sm: "640px",
+      sm: "768px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
