@@ -20,8 +20,24 @@ const HeroContent = () => {
     >
       {/* Left Content */}
       <div className="w-full flex flex-col gap-5 justify-center text-start">
+        {/* Profile Image */}
         <motion.div
-          className="Welcome-box py-2 px-3 border border-[#7042f88b] opacity-90 flex items-center mb-2"
+          variants={slideInFromTop}
+          className="flex justify-start mb-2"
+        >
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-[#7042f8]/60 shadow-lg">
+            <Image
+              src="/myPic.jpg" // <-- Replace with your image path
+              alt="Waseem Baig"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </motion.div>
+        {/* Welcome Box */}
+        <motion.div
+          className="Welcome-box py-2 px-3 border border-[#7042f88b] opacity-90 flex justify-center items-center mb-2"
           variants={slideInFromTop}
         >
           <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5" />
@@ -29,6 +45,7 @@ const HeroContent = () => {
             FullStack Web Developer PortFolio
           </h1>
         </motion.div>
+        {/* Name */}
         <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-4 text-4xl sm:text-5xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
