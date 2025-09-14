@@ -6,6 +6,7 @@ import Footer from "@/components/main/Footer";
 import Experience from "@/components/main/Experience";
 import ContactForm from "@/components/main/ContactForm";
 import { MyCodeEditor } from "@/components/main/CodeEditor";
+import Certifications from "@/components/main/Certifications";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Encryption />
         <Projects />
         <Experience />
+        <Certifications />
         <div className="flex justify-between w-full flex-wrap p-6">
           <MyCodeEditor />
           <ContactForm />
