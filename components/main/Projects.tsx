@@ -85,6 +85,59 @@ const Projects = () => {
           description="The Todo List application helps users manage their tasks efficiently with a simple and intuitive interface for better productivity."
           technologies={["React", "CSS", "MongoDB", "Express.js", "JavaScript"]}
         />
+        <ProjectCard
+          src="/vyuha.png"
+          link="https://ivyuha.com"
+          title="Official Website - Vyuha Innovation Foundation"
+          description="Developed a fully responsive brand website with 50+ reusable components, SEO optimization, and cross-device compatibility, enhancing user engagement and visibility."
+          technologies={[
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "Framer Motion",
+            "Vercel",
+          ]}
+        />
+        <ProjectCard
+          src="/vyuhaAdmin.png"
+          link="https://admin.ivyuha.com"
+          title="Admin Panel - Vyuha Innovation Foundation"
+          description="Built a secure and scalable admin dashboard for managing content and workflows, featuring responsive UI, reusable components, and smooth performance across devices."
+          technologies={[
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "Framer Motion",
+            "Vercel",
+          ]}
+        />
+        <ProjectCard
+          src="/astra.png"
+          link="https://astraairconditioning.com/"
+          title="Astra Air Conditioning"
+          description="Developed a robust admin dashboard to efficiently manage content and workflows, with a fully responsive interface, reusable components, and seamless performance across devices."
+          technologies={[
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "Framer Motion",
+            "Vercel",
+          ]}
+        />
+        <ProjectCard
+          src="/portfolio2.png"
+          link="https://github.com/Waseem-Baig/political-portfolio-vpr.git"
+          title="Political Portfolio"
+          description="Designed a professional and responsive political portfolio website to highlight achievements, initiatives, and public engagements, ensuring accessibility and seamless experience across devices."
+          technologies={["Next.js", "React", "TailwindCSS", "Vercel"]}
+        />
+        <ProjectCard
+          src="/musicApp.png"
+          link="https://music-school-website-chi.vercel.app"
+          title="Music School Website"
+          description="Built a vibrant and responsive website for a music school to showcase courses, instructors, and events, with an engaging UI and smooth experience across all devices."
+          technologies={["Next.js", "React", "TailwindCSS", "Vercel"]}
+        />
       </div>
     </div>
   );

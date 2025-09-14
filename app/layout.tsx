@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://waseembaig.me"),
   title: "Waseem's Portfolio",
   description:
-    "Waseem Baig is a passionate Full Stack Developer from VIT AP, India, specializing in modern web technologies like React, Next.js, and Three.js. With a strong background in UI/UX design, cloud integration, and open source contributions, Waseem creates engaging, responsive, and visually stunning web applications. Explore his portfolio to discover innovative projects, interactive 3D models, and a commitment to delivering high-quality software solutions.",
+    "Waseem Baig is a passionate Software Developer from VIT AP, India, specializing in modern web technologies like React, Next.js, and Three.js. With a strong background in UI/UX design, cloud integration, and open source contributions, Waseem creates engaging, responsive, and visually stunning web applications. Explore his portfolio to discover innovative projects, interactive 3D models, and a commitment to delivering high-quality software solutions.",
   keywords: [
     "Waseem",
     "VIT AP",
@@ -81,7 +81,9 @@ export const metadata: Metadata = {
     creator: "@WaseemB14268619",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "./favicon.ico",
+    shortcut: "./favicon.ico",
+    apple: "./favicon.ico",
   },
 };
 

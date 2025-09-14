@@ -73,9 +73,9 @@ function Experience3D({ modelPath }: { modelPath: string }) {
 
 const experiences = [
   {
-    role: "Frontend Developer Intern",
+    role: "Software Developer Intern",
     company: "Vyuha Innovation Foundation",
-    period: "April 2025 - Present",
+    period: "Apr 2025 - Present",
     description: [
       "Developing responsive web applications using Next.js and Tailwind CSS.",
       "Collaborating on animated UI components for brand storytelling.",
@@ -85,7 +85,7 @@ const experiences = [
   {
     role: "Frontend Developer (Internship)",
     company: "University Website Internship at VIT-AP",
-    period: "January 2025 - March 2025",
+    period: "Dec 2024 - Mar 2025",
     description: [
       "Led frontend development for university website using modern tech stack.",
       "Implemented reusable components and responsive layouts.",
@@ -93,13 +93,13 @@ const experiences = [
     ],
   },
   {
-    role: "Full Stack Developer",
-    company: "Personal Projects",
-    period: "2023",
+    role: "Frontend Developer",
+    company: "Rotaract",
+    period: "2024",
     description: [
-      "Built a food delivery web app (Delivery Dost) using React, Tailwind, and Flask.",
-      "Developed a face detection attendance system with OpenCV and Firebase.",
-      "Deployed applications using Vercel and VPS, with domain and SSL setup.",
+      "Developed the frontend for RotaractHub.in to manage events, initiatives, and member activities using React and TailwindCSS.",
+      "Integrated interactive features for seamless user engagement and responsive design across devices.",
+      "Handled deployment on Vercel with domain setup and SSL configuration for secure and reliable access.",
     ],
   },
 ];

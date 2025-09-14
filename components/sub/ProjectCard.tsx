@@ -17,7 +17,7 @@ const ProjectCard = ({
   technologies,
 }: Props) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F0F23] via-[#1A1A3A] to-[#2A0E61] border border-[#7042f8]/20 shadow-2xl hover:shadow-[#7042f8]/25 transition-all duration-500 hover:scale-[1.02] hover:border-[#7042f8]/40 max-w-[350px] w-full">
+    <div className="group relative overflow-hidden rounded-2xl bg-black/40 border border-[#7042f8]/20 shadow-2xl hover:shadow-[#7042f8]/25 transition-all duration-500 hover:scale-[1.02] hover:border-[#7042f8]/40 max-w-[350px] w-full">
       {/* Image Container with Overlay */}
       <div className="relative overflow-hidden">
         <Image
